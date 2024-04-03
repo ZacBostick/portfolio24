@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zac Bostick</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+</head>
+<body id="home">
+    <nav class="top-nav">
+        <a href="#home" class="nav-brand">Zac Bostick</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <button id="theme-toggle">Dark Mode</button>
+        </div>
+        
+    </nav>
+    <div class="centered-content">
+    <header>
+        <div class="header-content">
+            <div class="profile-pic-wrapper">
+                <img src="assets/images/1712151379678.jpeg" alt="Zac Bostick" class="profile-pic">
+            </div>
+            <div class="text-social-container">
+                <h1>Hi, I'm Zac. <span class="subtitle">I am a software developer | Tech Lead @ IPN</span></h1>
+                <div class="social-links">
+                    <a href="https://twitter.com/zacdbostick" class="twitter-link"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+                    <a href="https://www.instagram.com/zacdbostick/" class="instagram-link"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.linkedin.com/in/zacbostick/" class="linkedin-link"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                    <a href="https://github.com/ZacBostick" class="github-link"><i class="fab fa-github"></i>Github</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+    <section id="about" class="about-section">
+        <div class="container">
+            
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    As the <strong>Director of Technology</strong> at the <em>Intercollegiate Psychedelics Network (IPN)</em>, I'm at the forefront of pioneering digital solutions that catalyze collaboration in the realm of psychedelic research. My journey in tech began over ten years ago. I have worked in many different capacities, from event technology, to operations/IT, to software development. I have a passion for creating technology that empowers people to connect, learn, and grow. I believe that technology has the power to transform the way we interact with the world and each other, and I'm happy to be a part of that transformation.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/IPN Store Logo.png" alt="IPN Logo">
+                </div>
+                <div class="project-content">
+                    <h3>IPN Membership Portal</h3>
+                    <p>
+                        As the architect and developer of the IPN Membership Portal, I brought to life a vibrant community platform for professionals and enthusiasts in the psychedelic ecosystem. Built from the ground up using Flutter for cross-platform functionality and Firebase for backend services, this app seamlessly integrates a rich array of features, including live seminars, a psychedelic job board, and a comprehensive library of resources. Designed to cater to over 500 active users across various devices, this project highlights my skills in creating impactful, user-centric applications that drive forward the intersection of technology and community engagement.
+                    </p>
+                    <a href="https://members.intercollegiatepsychedelics.net/#/" class="button">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/GenLabsAI (16 × 9 in) (4 × 3 in) (4 × 4 in) (3 × 4 in) (4 × 4 in).png" alt="Psychedelic Graduation">
+                </div>
+                <div class="project-content">
+                    <h3>GenLabsAI</h3>
+                    <p>
+                        In developing GenLabsAI, I aspired to merge advanced AI with an accessible platform to revolutionize how we create digital content. This platform is a one-stop solution for generating logos, images, videos, music, and code, all designed to empower users to bring their creative visions to life with ease. Built on a solid foundation of NextJS, TailwindCSS, Node.js, and enhanced with Stripe for secure payments and Clerk for robust user authentication, GenLabsAI exemplifies the future of content creation. It is meticulously architected to be scalable, performant, and secure, addressing the complex needs of today's digital creators. GenLabsAI not only represents my commitment to leveraging the latest technologies for creative expression but also serves as a benchmark in the evolution of content creation tools.
+                    </p>
+                    <a href="https://www.genlabsai.com/" class="button">Visit Site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Bypassing YouTube API Restrictions</h3>
+                <p>
+                    Recently, while building a mobile app for my organization’s membership portal, I encountered an issue with YouTube API restrictions on private and unlisted videos. These restrictions prevent fetching of unlisted playlists, a significant issue if your organization uses YouTube to store its video content library. To circumvent these limitations, I developed a tool named PrivateYouTubeSync.
+                </p>
+                <a href="https://medium.com/@zac.bostick/private-youtube-api-fetcher-3459eb4e70b3" class="button">Read More</a>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2022 Zac Bostick</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.top-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        let darkMode = false;
+    
+        themeToggle.addEventListener('click', () => {
+            darkMode = !darkMode;
+            if (darkMode) {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = 'Light Mode';
+            } else {
+                document.body.removeAttribute('data-theme');
+                themeToggle.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
+
+</html>
